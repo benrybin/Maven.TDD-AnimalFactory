@@ -39,5 +39,25 @@ public class CatTest {
         Assert.assertEquals(givenBirthDate, retrievedBirthDate);
         Assert.assertEquals(givenId, retrievedId);
     }
+    @Test
+    public void setNameTest() {
+        // Given (cat data)
+        String givenName = "Zula";
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+
+        // When (a cat is constructed)
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+
+        // When (we retrieve data from the cat)
+        String retrievedName = cat.getName();
+        Date retrievedBirthDate = cat.getBirthDate();
+        Integer retrievedId = cat.getId();
+
+        // Then (we expect the given data, to match the retrieved data)
+        Assert.assertEquals(givenName, retrievedName);
+        Assert.assertEquals(givenBirthDate, retrievedBirthDate);
+        Assert.assertEquals(givenId, retrievedId);
+    }
 
 }
